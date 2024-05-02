@@ -22,7 +22,7 @@ def load_data():
         docs = reader.load_data()
         # llm = OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert o$
         # index = VectorStoreIndex.from_documents(docs)
-        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="You are an expert on the questions about Aasim Malik profile. Assume that all questions are related to him. Keep your answers technical and based on facts – do not hallucinate answers."))
+        service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-3.5-turbo", temperature=0.5, system_prompt="Task: Answer questions about Aasim's professional background. Input: the user will ask question about Aasim's professional background. Output: 1. Provide Factual Answers: Base your responses on the information you have about Aasim's background. Avoid making up information or generating responses that are not grounded in reality. 2. **Focus on Professional Context:** When answering questions, keep the focus on Aasim's professional experience and skills. 3. **Handle Unclear Questions:** If a question is unclear or ambiguous, you may rephrase it for clarification before attempting to answer. 4. **Indicate Information Needs:** If a question requires specific details not provided, you may acknowledge that additional information would be helpful for a more comprehensive response."))
         index = VectorStoreIndex.from_documents(docs, service_context=service_context)
         return index
 
