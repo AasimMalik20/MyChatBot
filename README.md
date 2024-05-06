@@ -1,25 +1,42 @@
-# 🦙📚 LlamaIndex - Chat with the Streamlit docs
+** LlamaIndex - Chat with my custom chatbot designed to answer questions based on my professional career**
 
-Build a chatbot powered by LlamaIndex that augments GPT 3.5 with the contents of the Streamlit docs (or your own data).
+This project builds a personalized chatbot powered by LlamaIndex, a powerful tool for indexing and retrieving information. It leverages the capabilities of GPT-3.5 and augments it with my professional data, allowing you to have informative conversations about my work experience.
 
-## Overview of the App
+Key Features:
 
-<img src="app.png" width="75%">
+Targeted Responses: Ask questions related to my professional background, and the chatbot will use your indexed data to provide insightful answers.
+Streamlit Integration: The user interface is built with Streamlit, offering a user-friendly chat experience.
+How it Works:
 
-- Takes user queries via Streamlit's `st.chat_input` and displays both user queries and model responses with `st.chat_message`
-- Uses LlamaIndex to load and index data and create a chat engine that will retrieve context from that data to respond to each user query
+User Input: You can interact with the chatbot by typing your questions directly into the chat interface.
+Data Retrieval: LlamaIndex seamlessly retrieves relevant information from your indexed professional data.
+GPT-3.5 Augmentation: Leveraging the power of GPT-3.5, the chatbot generates comprehensive and informative responses.
+Getting Started:
 
-## Demo App
+Prerequisites:
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llamaindex-chat-with-docs.streamlit.app/)
+An OpenAI API key (instructions below)
+Python 3.x
+Installation:
 
-## Get an OpenAI API key
+Clone the repository:
+Bash
+git clone https://github.com/AasimMalik20/MyChatBot.git
+Install dependencies:
+pip install -r requirements.txt
 
-You can get your own OpenAI API key by following the following instructions:
-1. Go to https://platform.openai.com/account/api-keys.
-2. Click on the `+ Create new secret key` button.
-3. Next, enter an identifier name (optional) and click on the `Create secret key` button.
+Obtain an OpenAI API Key:
+Visit https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key and create a new secret key.
+Store the key securely in the streamlit workspace (not in the repository).
 
-## Try out the app
+Create a Streamlit account: 
+https://share.streamlit.io/
+Create a new app > enter the respective details[Github link and secret key]
 
-Once the app is loaded, enter your question about the Streamlit library and wait for a response.
+you can also run the app from terminal:
+python streamlit run streamlit_app.py
+This will launch the Streamlit app in your web browser.
+
+Usage:
+
+Once the app is running, simply type your questions about your professional background in the chat window and hit enter. The chatbot will analyze your query and respond using your indexed data.
